@@ -6,10 +6,10 @@ global.app = express();
 global.knex = require("knex")({
     client : "mysql",
     connection : {
-        host : "srv1866.hstgr.io",
-        user : "u225792926_root",
-        password : "Handsome2543",
-        database : "u225792926_rating",
+        host : process.env.DB_HOST,
+        user : process.env.DB_USER,
+        password : process.env.DB_PASSWORD,
+        database : process.env.DB_DATABASE,
     }
 })
 
